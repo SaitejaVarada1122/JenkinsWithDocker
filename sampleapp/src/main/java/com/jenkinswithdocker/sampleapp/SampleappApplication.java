@@ -17,7 +17,7 @@ public class SampleappApplication {
 	
 	@GetMapping("/greet")
 	public String sayHello(@RequestParam String name) {
-		return "Hello "+name+" Very Good Morning From Jenkins and Docker!!!";
+		return "Hello "+name+" Very Good Morning From Jenkins & Docker !!!";
 	}
 
 }
