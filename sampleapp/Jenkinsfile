@@ -33,8 +33,8 @@ pipeline {
     stage('Run Container'){
 		steps{
 					// Stop old container if exists
-                    bat 'docker stop spring-app || true'
-                    bat 'docker rm spring-app || true'
+                    bat 'docker stop spring-app || exit 0'
+                    bat 'docker rm spring-app || exit 0'
                     
                     // Run new container
                     bat 'docker run -d -p 9124:9123 --name spring-app saitejavarada/jenkinswithdocker:0.V1'
